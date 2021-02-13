@@ -10,18 +10,14 @@
 ## 安裝與執行步驟 (Installation and Execution)
 1. 將專案複製到本機 (兩種方法)
 > (1) 打開終端機輸入 
-`git clone https://github.com/ben7152000/expense-tracker.git`</br>
+`git clone https://github.com/ben7152000/2-3_A13_homework.git`</br>
 (2) 點選 download ZIP 下載
 
 2. 進入專案資料夾安裝工具包
 > 打開終端機輸入
 `npm install`
 
-3. 建立種子檔案
-> 打開終端機輸入
-`npm run seed`
-
-3. 執行專案
+4. 執行專案
 > 打開終端機輸入 
 `npm run dev`
 
@@ -29,9 +25,5 @@
 > 打開瀏覽器在網址列輸入 localhost:3000 即可瀏覽
 
 ## 功能描述 (Features)
-1. 首頁能夠瀏覽所有事項
-2. 按下 + 能夠新增一個支出清單
-3. 按下 筆 能夠重新編輯支出清單
-4. 按下 垃圾桶 能夠刪除一個支出清單
-5. 可利用篩選功能選擇出相同種類清單
-6. 首頁有當下所有清單的總額顯示
+1. 在根目錄時 '/' 會在 server.log 裡看到時間的顯示
+=> 2021-02-14 00:30:38 | GET from / | total time : 2 ms
