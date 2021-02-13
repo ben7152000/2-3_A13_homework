@@ -25,5 +25,5 @@
 > 打開瀏覽器在網址列輸入 localhost:3000 即可瀏覽
 
 ## 功能描述 (Features)
-1. 在根目錄時 '/' 會在 server.log 裡看到時間的顯示
+1. 會在所有目錄執行時，在 server.log 裡顯示，時間、用什麼方法、來自哪個目錄以及 cycle time
 => 2021-02-14 00:30:38 | GET from / | total time : 2 ms
