@@ -1,15 +1,26 @@
 const express = require('express')
 const app = express()
-
-const dataFns = require('date-fns')
-const responseTime = require('response-time')
-
 const PORT = 3000
 
-app.use(responseTime((req, res , time) => {
-  const formatTime = dataFns.format(new Date (), 'yyyy-MM-dd HH:mm:ss')
-  console.log(`${formatTime} | ${req.method} from ${req.originalUrl} | total time : ${time} ms`)
-}))
+// const dataFns = require('date-fns')
+// const responseTime = require('response-time')
+
+// app.use(responseTime((req, res , time) => {
+//   const formatTime = dataFns.format(new Date (), 'yyyy-MM-dd HH:mm:ss')
+//   console.log(`${formatTime} | ${req.method} from ${req.originalUrl} | total time : ${time} ms`)
+// }))
+
+function formatDate (req, res, next) {
+  const date = new Date().toISOString().substr(0, 19).replace('T', ' ')
+  const reqTime = Date.now()
+  res.on('finish', () => {
+    const cycleTime = Date.now() - reqTime
+    console.log(`${date} | ${req.method} from ${req.originalUrl} | total time : ${cycleTime} ms`)
+  })
+  next () 
+}
+
+app.use(formatDate)
 
 app.get('/', (req, res) => {
   res.send('列出全部 Todo')
