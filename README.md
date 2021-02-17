@@ -4,8 +4,6 @@
 1. Node.js : v14.15.4
 2. Express : v4.17.1
 3. Nodemon : v2.0.7
-4. Date-Fns : v2.17.0
-5. Response-Time : v2.3.2
 
 ## 安裝與執行步驟 (Installation and Execution)
 1. 將專案複製到本機 (兩種方法)
